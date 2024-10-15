@@ -1,34 +1,18 @@
 import React from "react";
-import { Body, Container, Side, Wrapper } from "./style";
-import { Outlet } from "react-router-dom";
+import { Body, Container, Logo, LogOut, Side, Wrapper } from "./style";
+import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 
 export const Sidebar = () => {
+  const navigate = useNavigate();
+  const onClickLogo = () => {
+    navigate("/");
+  };
   return (
     <Container>
-      <Side>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
-        <h1>Sidebar</h1>
+      <Side onClick={onClickLogo}>
+        <Logo>Webbrain.crm</Logo>
+        <LogOut>Chiqish</LogOut>
       </Side>
 
       <Body>
